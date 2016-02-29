@@ -1,0 +1,70 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+html, body {
+    height:100%;
+    width:100%;
+}
+
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    min-height: 100%;
+}
+
+#question {
+    font-style: italic;
+    font-size: large;
+    margin-bottom: 25px;
+}
+
+#status {
+    margin-bottom: 10px;
+}
+
+#answers {
+    text-align: left;
+    margin: 0 auto;
+}
+
+#answers div {
+    margin-bottom: 10px;
+}
+
+#answers label {
+    font-size: medium;
+    margin-left: 10px;
+}
+
+#answers-row {
+    height: 200px;
+}
+
+#page-wrap {
+    font-family: 'Open Sans', sans-serif;
+    width: 980px;
+    margin: 0 auto;
+}
+
+.button-back {
+    float: left;
+    margin-left: 30%;
+
+}
+
+.button-next {
+    float: right;
+    margin-right: 30%;
+}
+
+.statistics {
+    float: right;
+}
+
+.right {
+    color: green;
+}
+.wrong {
+    color: red;
+    text-decoration: line-through;
+}

@@ -12,17 +12,24 @@
     <title>The QUIZ</title>
 
     <!--<script src="lib/jquery.js"></script>-->
-    <script src="js/questions.js"></script>
-    <script src="js/quiz.js"></script>
     <link rel="stylesheet" type="text/css" href="css/quiz.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">-->
 
 </head>
 <body>
-<div id="page-wrap">
+<nav>
+    <div class="nav-wrapper blue-grey lighten-4">
+        <a href="#!" class="brand-logo"></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a class="waves-effect waves-light btn">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+
 <!--<h1>The QUIZ</h1>-->
 
 <div class="statistics">
@@ -30,18 +37,18 @@
     Correct answers: <span id="correctAnswers"></span>
     <div id="message"></div>
 </div>
-<div id="fade_area">
-    <div class="row">
-        <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Question</span>
-                    <p id="question">I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                </div>
+<div class="row">
+    <div class="col s12 m6 offset-m3">
+        <div class="card blue-grey darken-1 hoverable">
+            <div class="card-content white-text">
+                <span class="card-title">Question</span>
+                <p id="question">I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
             </div>
         </div>
     </div>
+</div>
+<div id="fade_area">
     <div class="row">
         <div class="col-md-12">
             <div id="status"></div>
@@ -62,35 +69,12 @@
     </div>
 </div>
 
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                © 2014 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-        </div>
-    </footer>
+<script src="js/questions.js"></script>
+<script src="js/quiz.js"></script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+<!--<script src="js/bootstrap.min.js"></script>-->
 <script type="text/javascript" src="js/materialize.min.js"></script>
 </div>
 </body>

@@ -122,6 +122,7 @@ function update() {
         input.type = "radio";
         input.name = "answer";
         input.value = i;
+        input.className = "with-gap";
         var label = document.createElement("label");
         label.setAttribute('for', 'radio_'+i);
         label.innerHTML = data["choices"][i];

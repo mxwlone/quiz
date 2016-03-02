@@ -9,16 +9,15 @@ html, body {
 #question {
     font-style: italic;
     font-size: large;
-    margin-bottom: 25px;
 }
 
 #status {
-    margin-bottom: 10px;
+    font-size: large;
 }
 
 #answers {
+    display: inline-block;
     text-align: left;
-    margin: 0 auto;
 }
 
 #answers div {
@@ -31,7 +30,7 @@ html, body {
 }
 
 #answers-row {
-    height: 200px;
+    min-height: 140px;
 }
 
 /*#page-wrap {*/
@@ -55,10 +54,14 @@ html, body {
     float: right;
 }
 
-.right {
+.right-answer {
     color: green;
 }
-.wrong {
+.wrong-answer {
     color: red;
     text-decoration: line-through;
+}
+
+.card {
+    min-height: 88px;
 }

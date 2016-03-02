@@ -8,7 +8,6 @@ var correct = 0;
 document.addEventListener("DOMContentLoaded", function(event) {
     current = 0;
     update(current);
-    $('#button-back').hide();
     $('#status').html('&nbsp;');
 });
 
@@ -24,27 +23,35 @@ function toggle_btns(next) {
             btn_next.attr('onclick', "next()");
             btn_next.text('Next');
         } else {
-            btn_next.remove();
+            btn_next.removeAttr('onclick');
+            btn_next.addClass('disabled');
         }
     }
 
     if(current == 0) {
-        btn_back.hide();
+        btn_back.addClass('disabled');
     } else {
-        btn_back.show();
+        if (btn_back.hasClass('disabled')) {
+            btn_back.removeClass('disabled');
+        }
     }
 }
 
 function showResults() {
+    toggle_btns('next');
     $('#answers').html('&nbsp;');
-    $('#question').text('');
+    $('#question').text('Congratulations, you finished the QIUZ!');
     $('#status').text('');
-    $('#button-next').hide();
-    $('#message').text('Congratulations, you finished the QIUZ!');
 }
 
 function submit() {
     if ($('input[name=answer]:checked').length == 0) {
+        var statusDiv = $('#status');
+        if (statusDiv.hasClass('green-text')) {
+            statusDiv.removeClass('green-text');
+        } else if (statusDiv.hasClass('red-text')) {
+            statusDiv.removeClass('red-text');
+        }
         $('#status').text('Please select one of the options.');
         return;
     }
@@ -57,7 +64,6 @@ function next() {
         $('#fade_area').fadeToggle('fast', function() {
             update(++current);
             toggle_btns('submit');
-            $('#status').html('&nbsp;');
             $('#fade_area').fadeToggle('fast');
         });
     } else {
@@ -71,9 +77,8 @@ function back() {
     if (current - 1 >= 0) {
         $('#fade_area').fadeOut('fast', function() {
             update(--current);
-            $('#button-next').show();
-            $('#status').html('&nbsp;');
-            $('#message').text('');
+            if ($('#button-next').hasClass('disabled'))
+                $('#button-next').removeClass('disabled');
             toggle_btns('next');
             $('#fade_area').fadeIn('fast');
         });
@@ -87,18 +92,23 @@ function checkAnswer() {
 
     var answersDiv = $('#answers');
     answersDiv.find(':radio').prop('disabled', true);
-    answersDiv.find(':radio[value!='+correctAnswerValue+']').closest('div').find('label').addClass('wrong');
-    answersDiv.find(':radio[value='+correctAnswerValue+']').closest('div').find('label').addClass('right');
+    answersDiv.find(':radio[value!='+correctAnswerValue+']').closest('div').find('label').addClass('wrong-answer');
+    answersDiv.find(':radio[value='+correctAnswerValue+']').closest('div').find('label').addClass('right-answer');
+
+    var statusDiv = $('#status');
 
     if (isCorrectAnswer) {
         correct++;
         var correctAnswersDiv = document.getElementById("correctAnswers");
         correctAnswersDiv.innerHTML = correct;
-        $('#status').text('Correct!');
+        statusDiv.text('Correct!');
+        statusDiv.addClass('green-text');
     } else {
-        $('#status').text('Wrong!');
+        statusDiv.text('Wrong!');
+        statusDiv.addClass('red-text');
     }
 
+    allQuestions[current]["status"] = $('#status-wrapper').html();
     allQuestions[current]["selectedAnswer"] = parseInt(answerInput.val());
     console.log(allQuestions[current]);
 }
@@ -113,9 +123,16 @@ function update() {
 
     currentQuestionDiv.innerHTML = current+1 + "/" + allQuestions.length;
     questionDiv.innerHTML = data["question"];
+
+    var isOld = data["selectedAnswer"] != null;
+    if (isOld) {
+        $('#status-wrapper').html(data['status']);
+    } else {
+        $('#status').html('&nbsp');
+    }
+
     answerDiv.innerHTML = null;
     for (var i in data["choices"]) {
-        var isOld = data["selectedAnswer"] != null;
         var div = document.createElement("div");
         var input = document.createElement("input");
         input.id = 'radio_'+i;
@@ -130,14 +147,17 @@ function update() {
         if (isOld) {
             input.disabled = true;
             if (data["selectedAnswer"] == i) {
-                label.setAttribute('class', 'right');
+                label.setAttribute('class', 'right-answer');
                 input.checked = true;
             } else {
-                label.setAttribute('class', 'wrong');
+                label.setAttribute('class', 'wrong-answer');
             }
         }
         div.appendChild(input);
         div.appendChild(label);
         answerDiv.appendChild(div);
     }
+
+
+
 }

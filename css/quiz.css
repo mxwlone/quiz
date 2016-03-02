@@ -1,12 +1,6 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans);
 
 html, body {
-    height:100%;
-    width:100%;
-}
-
-
-html, body {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     min-height: 100%;
@@ -40,22 +34,22 @@ html, body {
     height: 200px;
 }
 
-#page-wrap {
-    font-family: 'Open Sans', sans-serif;
-    width: 980px;
-    margin: 0 auto;
-}
+/*#page-wrap {*/
+    /*font-family: 'Open Sans', sans-serif;*/
+    /*width: 980px;*/
+    /*margin: 0 auto;*/
+/*}*/
 
-.button-back {
-    float: left;
-    margin-left: 30%;
+/*.button-back {*/
+    /*float: left;*/
+    /*margin-left: 30%;*/
 
-}
+/*}*/
 
-.button-next {
-    float: right;
-    margin-right: 30%;
-}
+/*.button-next {*/
+    /*float: right;*/
+    /*margin-right: 30%;*/
+/*}*/
 
 .statistics {
     float: right;

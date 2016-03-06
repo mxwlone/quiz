@@ -103,9 +103,13 @@ function checkAnswer() {
         correctAnswersDiv.innerHTML = correct;
         statusDiv.text('Correct!');
         statusDiv.addClass('green-text');
+        if (statusDiv.hasClass('red-text'))
+            statusDiv.removeClass('red-text');
     } else {
         statusDiv.text('Wrong!');
         statusDiv.addClass('red-text');
+        if (statusDiv.hasClass('green-text'))
+            statusDiv.removeClass('green-text');
     }
 
     allQuestions[current]["status"] = $('#status-wrapper').html();

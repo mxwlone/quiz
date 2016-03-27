@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The QUIZ</title>
+
+    <!--<script src="lib/jquery.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="css/quiz.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">-->
+
+</head>
+<body>
+<nav>
+    <div class="nav-wrapper blue-grey lighten-4">
+        <a href="#!" class="brand-logo"></a>
+    </div>
+</nav>
+<div class="container">
+
+    <h3>Please register your new account</h3>
+
+
+    <div class="row">
+        <form class="col s12 m8 offset-m2">
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <input id="firstname" type="text">
+                    <label for="firstname">First name</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input id="lastname" type="text">
+                    <label for="lastname">Last name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input id="birthdate" type="date" class="datepicker">
+                    <label for="birthdate">Day of birth</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input id="passwordConfirm" type="password" class="validate">
+                    <label for="passwordConfirm">Confirm password</label>
+                </div>
+            </div>
+            <div class="row">
+                <a class="waves-effect waves-light btn left">Register</a>
+                <button class="btn waves-effect waves-light right" type="submit" name="login">Login
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </form>
+    </div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!--<script src="js/bootstrap.min.js"></script>-->
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript">
+    $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        max: true,
+//        yearRange: "-100:+0", // last hundred years
+        selectYears: 100 // Creates a dropdown of 15 years to control year
+    });
+</script>
+
+</div>
+</body>
+</html>

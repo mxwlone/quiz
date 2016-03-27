@@ -9,7 +9,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     current = 0;
     update(current);
     $('#status').html('&nbsp;');
+    $('#userName').html(sessionStorage.user);
+    $('#btn_logout').click(logout);
 });
+
+function logout() {
+    sessionStorage.clear();
+    location.replace("login.html")
+}
 
 function toggle_btns(next) {
     var btn_next = $('#button-next');

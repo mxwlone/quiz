@@ -1,0 +1,16 @@
+{
+  "users":[
+    {
+      "firstname":"Max",
+      "lastname":"Brandi",
+      "email":"alterschweede@web.de",
+      "password":"123"
+    },
+    {
+      "firstname":"Peter",
+      "lastname":"Maffy",
+      "email":"peter@maffay.com",
+      "password":"456"
+    }
+  ]
+}

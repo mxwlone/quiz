@@ -22,9 +22,9 @@
 <body>
 <nav>
     <div class="nav-wrapper blue-grey lighten-4">
-        <a href="#!" class="brand-logo"></a>
-        <ul class="right hide-on-med-and-down">
-            <li><a class="waves-effect waves-light btn">Logout</a></li>
+        <a href="#!" class="brand-logo center">The Quizz</a>
+        <ul class="hide-on-med-and-down right">
+            <li><a class="waves-effect waves-light btn" id="btn_logout">Logout</a></li>
         </ul>
     </div>
 </nav>
@@ -36,7 +36,17 @@
 </div>
 <div class="section">
     <div class="row">
-        <div class="col s12 m6 offset-m3">
+        <div class="col s12 m3">
+            <div class="card blue-grey darken-1 hoverable">
+                <div class="card-content white-text">
+                    <p>
+                        Question <span id="currentQuestion"></span><br>
+                        Correct answers <span id="correctAnswers"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6">
             <div class="card blue-grey darken-1 hoverable">
                 <div class="card-content white-text">
                     <span id="question" class="card-title">Question</span>
@@ -46,15 +56,14 @@
             </div>
         </div>
         <div class="col s12 m3">
-        <div class="card blue-grey darken-1 hoverable">
-            <div class="card-content white-text">
-                <p>
-                    Question: <span id="currentQuestion"></span><br>
-                    Correct answers: <span id="correctAnswers"></span>
-                </p>
+            <div class="card blue-grey darken-1 hoverable">
+                <div class="card-content white-text">
+                    <p>
+                        Logged in as<br> <span id="userName"></span>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 </div>
 <div id="fade_area">

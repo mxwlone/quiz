@@ -31,7 +31,8 @@
 
 
     <div class="row">
-        <form class="col s12 m4 offset-m4">
+        <!--<div class="col s12 m4 offset-m4">-->
+        <form class="col s12 m4 offset-m4" action="#">
             <div class="row">
                 <div class="input-field col s12">
                     <input id="email" type="email" class="validate">
@@ -43,14 +44,21 @@
                 </div>
             </div>
             <div class="row">
+                <p>
+                    <input type="checkbox" class="filled-in" id="remember-box" />
+                    <label for="remember-box">Remember me</label>
+                </p>
+            </div>
+            <div class="row">
                 <div class="status-login"></div>
             </div>
             <div class="row">
-                <a class="waves-effect waves-light btn left">Register</a>
-                <button class="btn waves-effect waves-light right" type="submit" name="login" onclick="auth">Login
+                <a id="signup" class="waves-effect waves-light btn left">Sign up</a>
+                <button id="login" class="btn waves-effect waves-light right">Log in
                     <i class="material-icons right">send</i>
                 </button>
             </div>
+        <!--</div>-->
         </form>
     </div>
 
@@ -58,7 +66,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <!--<script src="js/bootstrap.min.js"></script>-->
-<script type="text/javascript" src="js/auth.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
 </div>
 </body>

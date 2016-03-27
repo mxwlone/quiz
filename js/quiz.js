@@ -114,10 +114,8 @@ function checkAnswer() {
 
     allQuestions[current]["status"] = $('#status-wrapper').html();
     allQuestions[current]["selectedAnswer"] = parseInt(answerInput.val());
-    //statusDiv.hide();
-    statusDiv.animate({fontSize: "40px"}, "slow");
-    statusDiv.animate({fontSize: "small"}, "slow");
-    //statusDiv.fadeIn("slow");
+    statusDiv.hide();
+    statusDiv.fadeIn('slow');
     console.log(allQuestions[current]);
 }
 

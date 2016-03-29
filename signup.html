@@ -22,16 +22,16 @@
 <body>
 <nav>
     <div class="nav-wrapper blue-grey lighten-4">
-        <a href="#!" class="brand-logo"></a>
+        <a href="#!" class="brand-logo center">The Quizz</a>
     </div>
 </nav>
 <div class="container">
 
-    <h3>Please register your new account</h3>
+    <h4>Sign up a new account</h4>
 
 
     <div class="row">
-        <form class="col s12 m8 offset-m2">
+        <form class="col s12 m8 offset-m2" action="#">
             <div class="row">
                 <div class="input-field col s12 m6">
                     <input id="firstname" type="text">
@@ -63,8 +63,13 @@
                 </div>
             </div>
             <div class="row">
-                <a class="waves-effect waves-light btn left">Register</a>
-                <button class="btn waves-effect waves-light right" type="submit" name="login">Login
+                <div class="status-text"></div>
+            </div>
+            <div class="row">
+                <a id="back_to_login" class="waves-effect waves-light btn left">Back</a>
+                <a id="clear_users" class="waves-effect waves-light btn">Clear</a>
+                <a id="show_users" class="waves-effect waves-light btn">Show</a>
+                <button id="submit_registration" class="btn waves-effect waves-light right" type="submit" name="login">Submit
                     <i class="material-icons right">send</i>
                 </button>
             </div>
@@ -76,6 +81,7 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <!--<script src="js/bootstrap.min.js"></script>-->
 <script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="js/signup.js"></script>
 <script type="text/javascript">
     $('.datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month

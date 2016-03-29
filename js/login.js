@@ -24,6 +24,7 @@ $(document).ready(function() {
 
 function register() {
     location.replace("signup.html");
+    return false;
 }
 
 function auth() {

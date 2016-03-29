@@ -1,0 +1,17 @@
+[
+  {
+  "question": "Who is Prime Minister of the United Kingdom?",
+  "choices": ["David Cameron", "Gordon Brown", "Winston Churchill", "Tony Blair"],
+  "correctAnswer": 0
+  },
+  {
+  "question": "Which is the most successful team in the Bundesliga?",
+  "choices": ["Borussia Dortmund", "FC Bayern Munich", "Werder Bremen"],
+  "correctAnswer": 1
+  },
+  {
+  "question": "Which is the best Web development IDE?",
+  "choices": ["Eclipse", "Visual Studio", "JetBrains WebStorm"],
+  "correctAnswer":2
+  }
+]

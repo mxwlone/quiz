@@ -4,13 +4,18 @@
 
 var current = 0;
 var correct = 0;
+var allQuestions = null;
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    current = 0;
-    update(current);
     $('#status').html('&nbsp;');
     $('#userName').html(sessionStorage.user);
     $('#btn_logout').click(logout);
+
+    current = 0;
+    $.getJSON("json/questions.json", function(json) {
+        allQuestions = json;
+        update(current);
+    });
 });
 
 function logout() {

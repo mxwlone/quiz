@@ -6,14 +6,19 @@ html, body {
     min-height: 100%;
 }
 
+.card-content p {
+    display: inline-block;
+    text-align: left;
+}
+
 #question {
     font-style: italic;
     font-size: large;
 }
 
-#status {
-    font-size: large;
-}
+/*#status {*/
+    /*font-size: large;*/
+/*}*/
 
 #answers {
     display: inline-block;
@@ -21,7 +26,7 @@ html, body {
 }
 
 #answers div {
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 #answers label {
@@ -49,10 +54,6 @@ html, body {
     /*float: right;*/
     /*margin-right: 30%;*/
 /*}*/
-
-.statistics {
-    float: right;
-}
 
 .right-answer {
     color: green;

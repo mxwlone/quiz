@@ -1,16 +1,10 @@
 {
   "users":[
     {
-      "firstname":"Max",
-      "lastname":"Brandi",
-      "email":"alterschweede@web.de",
+      "firstname":"Lax",
+      "lastname":"Gandi",
+      "email":"lax@gmx.de",
       "password":"123"
-    },
-    {
-      "firstname":"Peter",
-      "lastname":"Maffy",
-      "email":"peter@maffay.com",
-      "password":"456"
     }
   ]
 }

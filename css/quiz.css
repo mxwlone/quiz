@@ -6,7 +6,7 @@ html, body {
     min-height: 100%;
 }
 
-.card-content p {
+.stats {
     display: inline-block;
     text-align: left;
 }

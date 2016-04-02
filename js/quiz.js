@@ -7,6 +7,24 @@ var correct = 0;
 var allQuestions = null;
 
 document.addEventListener("DOMContentLoaded", function(event) {
+    var cookie = getCookieFunc('user');
+    if (cookie) {
+        console.log('Cookie found: ' + cookie);
+        var email = cookie.split(',')[0];
+        var username = cookie.split(',')[1];
+
+        sessionStorage.email = email;
+        sessionStorage.user = username;
+    } else {
+        console.log("No cookie found.");
+
+        if (!sessionStorage.user && !sessionStorage.email) {
+            console.log("No session data found, redirect to login.");
+            location.replace("login.html");
+            return false;
+        }
+    }
+
     $('#status').html('&nbsp;');
     $('#userName').html(sessionStorage.user);
     $('#btn_logout').click(logout);
@@ -18,9 +36,29 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 });
 
+function getCookieFunc(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+
 function logout() {
     sessionStorage.clear();
-    location.replace("login.html")
+    var cookie = getCookieFunc('user');
+    if (cookie != "") {
+        console.log("Cookie found: " + cookie);
+        console.log("Delete cookie.");
+
+        document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    }
+
+    location.replace("login.html");
+    return false;
 }
 
 function toggle_btns(next) {
